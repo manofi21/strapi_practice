@@ -14,14 +14,17 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
         const result = await super.create(ctx);
         
         // Function jika menggunakan mitrans Snap
-        let response = midtransCoreFunction(serverKey, clienKey, midtransClient, result);
+        let response = await midtransSnapFunction(serverKey, clienKey, midtransClient, result);
+
+        // Function jika menggunakan mitrans Core
+        // let response = midtransCoreFunction(serverKey, clienKey, midtransClient, result);
     
         return response;
     }
 }));
 
 // Function untuk memanggil result menggunakan midtrans Snap
-function midtransSnapFunction(serverKey, clienKey, midtransClient, result) {
+async function midtransSnapFunction(serverKey, clienKey, midtransClient, result) {
 
     // Create Snap API instance
     let snap = new midtransClient.Snap({
@@ -43,7 +46,7 @@ function midtransSnapFunction(serverKey, clienKey, midtransClient, result) {
 }
 
 // Function untuk memanggil result menggunakan midtrans Snap
-function midtransCoreFunction(serverKey, clienKey, midtransClient, result) {
+async function midtransCoreFunction(serverKey, clienKey, midtransClient, result) {
     // Create Core API instance
     let core = new midtransClient.CoreApi({
         isProduction : false,
@@ -64,5 +67,5 @@ function midtransCoreFunction(serverKey, clienKey, midtransClient, result) {
     };
 
     // charge transaction
-    return core.charge(parameter)
+    return core.charge(parameter);
 }
