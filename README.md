@@ -126,3 +126,31 @@ node JS 18v dan yarn 3.6.1
 
 Setelah itu => npm install -g yarn@latest
 
+
+-------------------------------------------------------------------------------------------------------------
+# Melakukan deploy project ke Biznet
+1. Masuk ke terminal dengan ssh jagoflutterfic@ip_addresh
+2. pergi ke github.com dan buka profile => setting => SSH and GPG keys
+3. Buka file ssh public(C:\Users\'user-name'\.ssh\id_rsa.pub) dan copy
+4. Click New SSH key, pastekan di field yang di sediakan. Dan jangan lupa menambahkan title
+5. Kembali ke terminal lakukan clone dengan comment:
+```shell
+git clone git@github.com:manofi21/strapi_practice.git
+```
+6. jalankan juga comment `cd strapi_practice && cp .env.example .env`
+7. buka file .env dengan `vim .env`. Masuk ke mode edit dengan menekan i
+8. Hapus dan isi file dengan .env yang ada di local. Jangan lupa menyesuaikan field berikut di dalam file .env:
+- DATABASE_HOST
+- DATABASE_PORT
+- DATABASE_NAME
+- DATABASE_USERNAME
+- DATABASE_PASSWORD
+- PORT
+9. lalu tekan tombol Esc untuk kembali ke mode command dan ketik `:wq` untuk keluar dan menyimpan perubahan
+10. ketikkan comment berikut untuk melakukan isialisasi terhadap projec strapi:
+```shell
+yarn
+yarn build
+npm run build
+```
+11. Setelah itu untuk menjalankannya dengan `yarn develop`
