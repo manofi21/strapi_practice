@@ -129,7 +129,7 @@ Setelah itu => npm install -g yarn@latest
 
 -------------------------------------------------------------------------------------------------------------
 # Melakukan deploy project ke Biznet
-1. Masuk ke terminal dengan ssh jagoflutterfic@ip_addresh
+1. Masuk ke terminal dengan `ssh jagoflutterfic@ip_addresh`
 2. pergi ke github.com dan buka profile => setting => SSH and GPG keys
 3. Buka file ssh public(C:\Users\'user-name'\.ssh\id_rsa.pub) dan copy
 4. Click New SSH key, pastekan di field yang di sediakan. Dan jangan lupa menambahkan title
@@ -154,3 +154,13 @@ yarn build
 npm run build
 ```
 11. Setelah itu untuk menjalankannya dengan `yarn develop`
+
+---------------------------------------------------------------
+# Membuat Environtment deploy di Postman
+1. Pastikan postman dalam keaddan "No Environment" setelah itu click icon disebelah kanan field
+![image](https://user-images.githubusercontent.com/54527045/255305053-c4d4953f-309b-47ce-8e98-c44ca5b424fc.png)
+
+2. Pastikan juga di terminal sudah login ke server. Jika ip address tidak ingan tinggal tetikkan `ip addr`.
+
+3. Buat variable baseUrl dengan nilainnya "ipAddress:port"
+![image](https://user-images.githubusercontent.com/54527045/255305414-3bb30303-4d5d-4a48-a444-0809a21dd50c.png)
