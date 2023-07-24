@@ -1,0 +1,2200 @@
+{
+	"info": {
+		"_postman_id": "cd5594d9-698d-4f04-ad10-84dc906c66cb",
+		"name": "fic6-be-jeremia_manogi_mario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5441457"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ollie\",\r\n    \"password\": \"Ollie187\",\r\n    \"email\": \"Ollie@gmail.com\",\r\n    \"username\": \"ollie\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/api/auth/local/register"
+			},
+			"response": [
+				{
+					"name": "Registration (200 Ok)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ollie\",\r\n    \"password\": \"Ollie187\",\r\n    \"email\": \"Ollie@gmail.com\",\r\n    \"username\": \"ollie\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/auth/local/register"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "9"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1689596711"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "338"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 12:24:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTk2NjUwLCJleHAiOjE2OTIxODg2NTB9.RqqUO7KF7eV6vcQ9k2B9RBSBdEqp60J9jlBUS8Imsh8\",\n    \"user\": {\n        \"id\": 1,\n        \"username\": \"ollie\",\n        \"email\": \"ollie@gmail.com\",\n        \"provider\": \"local\",\n        \"confirmed\": true,\n        \"blocked\": false,\n        \"createdAt\": \"2023-07-17T12:24:10.846Z\",\n        \"updatedAt\": \"2023-07-17T12:24:10.846Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identifier\":\"ollie\",\r\n    \"password\":\"Ollie187\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/api/auth/local"
+			},
+			"response": [
+				{
+					"name": "Login (200 Ok)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identifier\":\"ollie\",\r\n    \"password\":\"Ollie187\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/auth/local"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "8"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1689598152"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "338"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 12:48:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTk4MTE3LCJleHAiOjE2OTIxOTAxMTd9.O3EvMAtwbUHBwXh-VpMLniJCiecF6QpyKPo2Up6XgMU\",\n    \"user\": {\n        \"id\": 1,\n        \"username\": \"ollie\",\n        \"email\": \"ollie@gmail.com\",\n        \"provider\": \"local\",\n        \"confirmed\": true,\n        \"blocked\": false,\n        \"createdAt\": \"2023-07-17T12:24:10.846Z\",\n        \"updatedAt\": \"2023-07-17T12:24:10.846Z\"\n    }\n}"
+				},
+				{
+					"name": "Login (400 wrong parameter)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ollie\",\r\n    \"password\":\"Ollie187\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/auth/local"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "7"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1689598152"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "219"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 12:49:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": null,\n    \"error\": {\n        \"status\": 400,\n        \"name\": \"ValidationError\",\n        \"message\": \"identifier is a required field\",\n        \"details\": {\n            \"errors\": [\n                {\n                    \"path\": [\n                        \"identifier\"\n                    ],\n                    \"message\": \"identifier is a required field\",\n                    \"name\": \"ValidationError\"\n                }\n            ]\n        }\n    }\n}"
+				},
+				{
+					"name": "Login (404 wrong method)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ollie\",\r\n    \"password\":\"Ollie187\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/auth/local"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "94"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 12:49:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": null,\n    \"error\": {\n        \"status\": 404,\n        \"name\": \"NotFoundError\",\n        \"message\": \"Not Found\",\n        \"details\": {}\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer {{jwt}}",
+						"type": "text"
+					}
+				],
+				"url": "{{baseUrl}}/api/users/me"
+			},
+			"response": [
+				{
+					"name": "me (200 Ok)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{jwt}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/api/users/me"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "183"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 04:24:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"username\": \"ollie\",\n    \"email\": \"ollie@gmail.com\",\n    \"provider\": \"local\",\n    \"confirmed\": true,\n    \"blocked\": false,\n    \"createdAt\": \"2023-07-17T12:24:10.846Z\",\n    \"updatedAt\": \"2023-07-17T12:24:10.846Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/products?populate=*",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "populate",
+							"value": "*"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Product (200 Ok)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/api/products"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "372"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 13:45:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"attributes\": {\n                \"name\": \"Sepatu Adidas\",\n                \"description\": \"Sepatu masakini\",\n                \"quantity\": 1000,\n                \"price\": 600000,\n                \"inStock\": true,\n                \"image\": \"Sepatu.jpg\",\n                \"distributor\": \"PT Adidas\",\n                \"createdAt\": \"2023-07-17T13:45:10.681Z\",\n                \"updatedAt\": \"2023-07-17T13:45:11.907Z\",\n                \"publishedAt\": \"2023-07-17T13:45:11.901Z\"\n            }\n        }\n    ],\n    \"meta\": {\n        \"pagination\": {\n            \"page\": 1,\n            \"pageSize\": 25,\n            \"pageCount\": 1,\n            \"total\": 1\n        }\n    }\n}"
+				},
+				{
+					"name": "Get Product (200 Ok with Multi File result)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/products?populate=*",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2402"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 04:08:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"attributes\": {\n                \"name\": \"Sepatu Adidas\",\n                \"description\": \"Sepatu masakini\",\n                \"quantity\": 1000,\n                \"price\": 600000,\n                \"inStock\": true,\n                \"image\": \"Sepatu.jpg\",\n                \"distributor\": \"PT Adidas\",\n                \"createdAt\": \"2023-07-17T13:45:10.681Z\",\n                \"updatedAt\": \"2023-07-17T15:08:07.277Z\",\n                \"publishedAt\": \"2023-07-17T13:45:11.901Z\",\n                \"images\": {\n                    \"data\": [\n                        {\n                            \"id\": 1,\n                            \"attributes\": {\n                                \"name\": \"Untitled.png\",\n                                \"alternativeText\": null,\n                                \"caption\": null,\n                                \"width\": 999,\n                                \"height\": 501,\n                                \"formats\": {\n                                    \"thumbnail\": {\n                                        \"name\": \"thumbnail_Untitled.png\",\n                                        \"hash\": \"thumbnail_Untitled_e00cea95df\",\n                                        \"ext\": \".png\",\n                                        \"mime\": \"image/png\",\n                                        \"path\": null,\n                                        \"width\": 245,\n                                        \"height\": 123,\n                                        \"size\": 8.92,\n                                        \"url\": \"/uploads/thumbnail_Untitled_e00cea95df.png\"\n                                    },\n                                    \"small\": {\n                                        \"name\": \"small_Untitled.png\",\n                                        \"hash\": \"small_Untitled_e00cea95df\",\n                                        \"ext\": \".png\",\n                                        \"mime\": \"image/png\",\n                                        \"path\": null,\n                                        \"width\": 500,\n                                        \"height\": 251,\n                                        \"size\": 17.67,\n                                        \"url\": \"/uploads/small_Untitled_e00cea95df.png\"\n                                    },\n                                    \"medium\": {\n                                        \"name\": \"medium_Untitled.png\",\n                                        \"hash\": \"medium_Untitled_e00cea95df\",\n                                        \"ext\": \".png\",\n                                        \"mime\": \"image/png\",\n                                        \"path\": null,\n                                        \"width\": 750,\n                                        \"height\": 376,\n                                        \"size\": 26.06,\n                                        \"url\": \"/uploads/medium_Untitled_e00cea95df.png\"\n                                    }\n                                },\n                                \"hash\": \"Untitled_e00cea95df\",\n                                \"ext\": \".png\",\n                                \"mime\": \"image/png\",\n                                \"size\": 7.87,\n                                \"url\": \"/uploads/Untitled_e00cea95df.png\",\n                                \"previewUrl\": null,\n                                \"provider\": \"local\",\n                                \"provider_metadata\": null,\n                                \"createdAt\": \"2023-07-17T14:42:48.289Z\",\n                                \"updatedAt\": \"2023-07-17T14:42:48.289Z\"\n                            }\n                        }\n                    ]\n                }\n            }\n        },\n        {\n            \"id\": 2,\n            \"attributes\": {\n                \"name\": \"Sepatu Anak Nike\",\n                \"description\": \"Sepatu up to date\",\n                \"quantity\": 1000,\n                \"price\": 600000,\n                \"inStock\": true,\n                \"image\": \"Sepatu Nike.jpg\",\n                \"distributor\": \"PT Anak Nike\",\n                \"createdAt\": \"2023-07-17T13:58:13.235Z\",\n                \"updatedAt\": \"2023-07-17T14:02:25.606Z\",\n                \"publishedAt\": \"2023-07-17T13:58:13.232Z\",\n                \"images\": {\n                    \"data\": null\n                }\n            }\n        },\n        {\n            \"id\": 3,\n            \"attributes\": {\n                \"name\": \"Sepatu Nike\",\n                \"description\": \"Sepatu up to date\",\n                \"quantity\": 1000,\n                \"price\": 600000,\n                \"inStock\": true,\n                \"image\": \"http://localhost:1337/uploads/Untitled_e00cea95df.png\",\n                \"distributor\": \"PT Nike\",\n                \"createdAt\": \"2023-07-17T14:13:21.534Z\",\n                \"updatedAt\": \"2023-07-17T15:00:34.986Z\",\n                \"publishedAt\": \"2023-07-17T14:13:21.531Z\",\n                \"images\": {\n                    \"data\": null\n                }\n            }\n        },\n        {\n            \"id\": 5,\n            \"attributes\": {\n                \"name\": \"Sepatu Nike D Series\",\n                \"description\": \"Sepatu D series\",\n                \"quantity\": 1000,\n                \"price\": 600000,\n                \"inStock\": true,\n                \"image\": \"Sepatu Nike D.jpg\",\n                \"distributor\": \"PT Nike D\",\n                \"createdAt\": \"2023-07-18T04:08:20.375Z\",\n                \"updatedAt\": \"2023-07-18T04:08:20.375Z\",\n                \"publishedAt\": \"2023-07-18T04:08:20.371Z\",\n                \"images\": {\n                    \"data\": null\n                }\n            }\n        }\n    ],\n    \"meta\": {\n        \"pagination\": {\n            \"page\": 1,\n            \"pageSize\": 25,\n            \"pageCount\": 1,\n            \"total\": 4\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Single Product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/products/1?populate=*",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					],
+					"query": [
+						{
+							"key": "populate",
+							"value": "*"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Single Product (200 Ok)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/api/products/1"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "309"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 13:48:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"attributes\": {\n            \"name\": \"Sepatu Adidas\",\n            \"description\": \"Sepatu masakini\",\n            \"quantity\": 1000,\n            \"price\": 600000,\n            \"inStock\": true,\n            \"image\": \"Sepatu.jpg\",\n            \"distributor\": \"PT Adidas\",\n            \"createdAt\": \"2023-07-17T13:45:10.681Z\",\n            \"updatedAt\": \"2023-07-17T13:45:11.907Z\",\n            \"publishedAt\": \"2023-07-17T13:45:11.901Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				},
+				{
+					"name": "Get Single Product (200 Ok with Multi File result)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/products/1?populate=*",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"1"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1329"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 04:14:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"attributes\": {\n            \"name\": \"Sepatu Adidas\",\n            \"description\": \"Sepatu masakini\",\n            \"quantity\": 1000,\n            \"price\": 600000,\n            \"inStock\": true,\n            \"image\": \"Sepatu.jpg\",\n            \"distributor\": \"PT Adidas\",\n            \"createdAt\": \"2023-07-17T13:45:10.681Z\",\n            \"updatedAt\": \"2023-07-17T15:08:07.277Z\",\n            \"publishedAt\": \"2023-07-17T13:45:11.901Z\",\n            \"images\": {\n                \"data\": [\n                    {\n                        \"id\": 1,\n                        \"attributes\": {\n                            \"name\": \"Untitled.png\",\n                            \"alternativeText\": null,\n                            \"caption\": null,\n                            \"width\": 999,\n                            \"height\": 501,\n                            \"formats\": {\n                                \"thumbnail\": {\n                                    \"name\": \"thumbnail_Untitled.png\",\n                                    \"hash\": \"thumbnail_Untitled_e00cea95df\",\n                                    \"ext\": \".png\",\n                                    \"mime\": \"image/png\",\n                                    \"path\": null,\n                                    \"width\": 245,\n                                    \"height\": 123,\n                                    \"size\": 8.92,\n                                    \"url\": \"/uploads/thumbnail_Untitled_e00cea95df.png\"\n                                },\n                                \"small\": {\n                                    \"name\": \"small_Untitled.png\",\n                                    \"hash\": \"small_Untitled_e00cea95df\",\n                                    \"ext\": \".png\",\n                                    \"mime\": \"image/png\",\n                                    \"path\": null,\n                                    \"width\": 500,\n                                    \"height\": 251,\n                                    \"size\": 17.67,\n                                    \"url\": \"/uploads/small_Untitled_e00cea95df.png\"\n                                },\n                                \"medium\": {\n                                    \"name\": \"medium_Untitled.png\",\n                                    \"hash\": \"medium_Untitled_e00cea95df\",\n                                    \"ext\": \".png\",\n                                    \"mime\": \"image/png\",\n                                    \"path\": null,\n                                    \"width\": 750,\n                                    \"height\": 376,\n                                    \"size\": 26.06,\n                                    \"url\": \"/uploads/medium_Untitled_e00cea95df.png\"\n                                }\n                            },\n                            \"hash\": \"Untitled_e00cea95df\",\n                            \"ext\": \".png\",\n                            \"mime\": \"image/png\",\n                            \"size\": 7.87,\n                            \"url\": \"/uploads/Untitled_e00cea95df.png\",\n                            \"previewUrl\": null,\n                            \"provider\": \"local\",\n                            \"provider_metadata\": null,\n                            \"createdAt\": \"2023-07-17T14:42:48.289Z\",\n                            \"updatedAt\": \"2023-07-17T14:42:48.289Z\"\n                        }\n                    }\n                ]\n            }\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "Post Product [with files.images]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\n        \"name\": \"Sepatu Nike D Series\",\n        \"description\": \"Sepatu D series\",\n        \"quantity\": 1000,\n        \"price\": 600000,\n        \"inStock\": true,\n        \"image\": \"Sepatu Nike D.jpg\",\n        \"distributor\": \"PT Nike D\"\n    }",
+							"type": "text"
+						},
+						{
+							"key": "files.images",
+							"type": "file",
+							"src": "/C:/Users/Acer/Pictures/Untitled.png"
+						},
+						{
+							"key": "data.name",
+							"value": "Sepatu Nike D Series",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "{{baseUrl}}/api/products"
+			},
+			"response": [
+				{
+					"name": "Post Product (400 missing \"data\")",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NjAyMTUxLCJleHAiOjE2OTIxOTQxNTF9.nCHEjPB2r9qVh6dbjsW2G8J66i-12oX13MunMSwXCRQ",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/api/products"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "131"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 13:56:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": null,\n    \"error\": {\n        \"status\": 400,\n        \"name\": \"ValidationError\",\n        \"message\": \"Missing \\\"data\\\" payload in the request body\",\n        \"details\": {}\n    }\n}"
+				},
+				{
+					"name": "Post Request (200 Ok)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NjAyMTUxLCJleHAiOjE2OTIxOTQxNTF9.nCHEjPB2r9qVh6dbjsW2G8J66i-12oX13MunMSwXCRQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"name\": \"Sepatu Nike\",\r\n        \"description\": \"Sepatu up to date\",\r\n        \"quantity\": 1000,\r\n        \"price\": 600000,\r\n        \"inStock\": true,\r\n        \"image\": \"Sepatu Nike.jpg\",\r\n        \"distributor\": \"PT Nike\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/products"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "312"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 13:58:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"attributes\": {\n            \"name\": \"Sepatu Nike\",\n            \"description\": \"Sepatu up to date\",\n            \"quantity\": 1000,\n            \"price\": 600000,\n            \"inStock\": true,\n            \"image\": \"Sepatu Nike.jpg\",\n            \"distributor\": \"PT Nike\",\n            \"createdAt\": \"2023-07-17T13:58:13.235Z\",\n            \"updatedAt\": \"2023-07-17T13:58:13.235Z\",\n            \"publishedAt\": \"2023-07-17T13:58:13.232Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "Post Product [With Json Images]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"name\": \"Sepatu Nike Night\",\r\n        \"description\": \"Sepatu untuk aktifitas malam\",\r\n        \"quantity\": 1000,\r\n        \"price\": 650000,\r\n        \"inStock\": true,\r\n        \"image\": \"Sepatu Nike Night.jpg\",\r\n        \"distributor\": \"PT Nike\",\r\n        \"images\": [\r\n            {\r\n                \"id\": 1,\r\n                \"attributes\": {\r\n                    \"name\": \"Untitled.png\",\r\n                    \"alternativeText\": null,\r\n                    \"caption\": null,\r\n                    \"width\": 999,\r\n                    \"height\": 501,\r\n                    \"formats\": {\r\n                        \"thumbnail\": {\r\n                            \"name\": \"thumbnail_Untitled.png\",\r\n                            \"hash\": \"thumbnail_Untitled_e00cea95df\",\r\n                            \"ext\": \".png\",\r\n                            \"mime\": \"image/png\",\r\n                            \"path\": null,\r\n                            \"width\": 245,\r\n                            \"height\": 123,\r\n                            \"size\": 8.92,\r\n                            \"url\": \"/uploads/thumbnail_Untitled_e00cea95df.png\"\r\n                        },\r\n                        \"small\": {\r\n                            \"name\": \"small_Untitled.png\",\r\n                            \"hash\": \"small_Untitled_e00cea95df\",\r\n                            \"ext\": \".png\",\r\n                            \"mime\": \"image/png\",\r\n                            \"path\": null,\r\n                            \"width\": 500,\r\n                            \"height\": 251,\r\n                            \"size\": 17.67,\r\n                            \"url\": \"/uploads/small_Untitled_e00cea95df.png\"\r\n                        },\r\n                        \"medium\": {\r\n                            \"name\": \"medium_Untitled.png\",\r\n                            \"hash\": \"medium_Untitled_e00cea95df\",\r\n                            \"ext\": \".png\",\r\n                            \"mime\": \"image/png\",\r\n                            \"path\": null,\r\n                            \"width\": 750,\r\n                            \"height\": 376,\r\n                            \"size\": 26.06,\r\n                            \"url\": \"/uploads/medium_Untitled_e00cea95df.png\"\r\n                        }\r\n                    },\r\n                    \"hash\": \"Untitled_e00cea95df\",\r\n                    \"ext\": \".png\",\r\n                    \"mime\": \"image/png\",\r\n                    \"size\": 7.87,\r\n                    \"url\": \"/uploads/Untitled_e00cea95df.png\",\r\n                    \"previewUrl\": null,\r\n                    \"provider\": \"local\",\r\n                    \"provider_metadata\": null,\r\n                    \"createdAt\": \"2023-07-17T14:42:48.289Z\",\r\n                    \"updatedAt\": \"2023-07-17T14:42:48.289Z\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/products?populate=*",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "populate",
+							"value": "*"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post Product [With Images] (200 Ok)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"name\": \"Sepatu Nike Night\",\r\n        \"description\": \"Sepatu untuk aktifitas malam\",\r\n        \"quantity\": 1000,\r\n        \"price\": 650000,\r\n        \"inStock\": true,\r\n        \"image\": \"Sepatu Nike Night.jpg\",\r\n        \"distributor\": \"PT Nike\",\r\n        \"images\": [\r\n            {\r\n                \"id\": 1,\r\n                \"attributes\": {\r\n                    \"name\": \"Untitled.png\",\r\n                    \"alternativeText\": null,\r\n                    \"caption\": null,\r\n                    \"width\": 999,\r\n                    \"height\": 501,\r\n                    \"formats\": {\r\n                        \"thumbnail\": {\r\n                            \"name\": \"thumbnail_Untitled.png\",\r\n                            \"hash\": \"thumbnail_Untitled_e00cea95df\",\r\n                            \"ext\": \".png\",\r\n                            \"mime\": \"image/png\",\r\n                            \"path\": null,\r\n                            \"width\": 245,\r\n                            \"height\": 123,\r\n                            \"size\": 8.92,\r\n                            \"url\": \"/uploads/thumbnail_Untitled_e00cea95df.png\"\r\n                        },\r\n                        \"small\": {\r\n                            \"name\": \"small_Untitled.png\",\r\n                            \"hash\": \"small_Untitled_e00cea95df\",\r\n                            \"ext\": \".png\",\r\n                            \"mime\": \"image/png\",\r\n                            \"path\": null,\r\n                            \"width\": 500,\r\n                            \"height\": 251,\r\n                            \"size\": 17.67,\r\n                            \"url\": \"/uploads/small_Untitled_e00cea95df.png\"\r\n                        },\r\n                        \"medium\": {\r\n                            \"name\": \"medium_Untitled.png\",\r\n                            \"hash\": \"medium_Untitled_e00cea95df\",\r\n                            \"ext\": \".png\",\r\n                            \"mime\": \"image/png\",\r\n                            \"path\": null,\r\n                            \"width\": 750,\r\n                            \"height\": 376,\r\n                            \"size\": 26.06,\r\n                            \"url\": \"/uploads/medium_Untitled_e00cea95df.png\"\r\n                        }\r\n                    },\r\n                    \"hash\": \"Untitled_e00cea95df\",\r\n                    \"ext\": \".png\",\r\n                    \"mime\": \"image/png\",\r\n                    \"size\": 7.87,\r\n                    \"url\": \"/uploads/Untitled_e00cea95df.png\",\r\n                    \"previewUrl\": null,\r\n                    \"provider\": \"local\",\r\n                    \"provider_metadata\": null,\r\n                    \"createdAt\": \"2023-07-17T14:42:48.289Z\",\r\n                    \"updatedAt\": \"2023-07-17T14:42:48.289Z\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/products?populate=*",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1355"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 04:20:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 8,\n        \"attributes\": {\n            \"name\": \"Sepatu Nike Night\",\n            \"description\": \"Sepatu untuk aktifitas malam\",\n            \"quantity\": 1000,\n            \"price\": 650000,\n            \"inStock\": true,\n            \"image\": \"Sepatu Nike Night.jpg\",\n            \"distributor\": \"PT Nike\",\n            \"createdAt\": \"2023-07-18T04:20:28.758Z\",\n            \"updatedAt\": \"2023-07-18T04:20:28.758Z\",\n            \"publishedAt\": \"2023-07-18T04:20:28.756Z\",\n            \"images\": {\n                \"data\": [\n                    {\n                        \"id\": 1,\n                        \"attributes\": {\n                            \"name\": \"Untitled.png\",\n                            \"alternativeText\": null,\n                            \"caption\": null,\n                            \"width\": 999,\n                            \"height\": 501,\n                            \"formats\": {\n                                \"thumbnail\": {\n                                    \"name\": \"thumbnail_Untitled.png\",\n                                    \"hash\": \"thumbnail_Untitled_e00cea95df\",\n                                    \"ext\": \".png\",\n                                    \"mime\": \"image/png\",\n                                    \"path\": null,\n                                    \"width\": 245,\n                                    \"height\": 123,\n                                    \"size\": 8.92,\n                                    \"url\": \"/uploads/thumbnail_Untitled_e00cea95df.png\"\n                                },\n                                \"small\": {\n                                    \"name\": \"small_Untitled.png\",\n                                    \"hash\": \"small_Untitled_e00cea95df\",\n                                    \"ext\": \".png\",\n                                    \"mime\": \"image/png\",\n                                    \"path\": null,\n                                    \"width\": 500,\n                                    \"height\": 251,\n                                    \"size\": 17.67,\n                                    \"url\": \"/uploads/small_Untitled_e00cea95df.png\"\n                                },\n                                \"medium\": {\n                                    \"name\": \"medium_Untitled.png\",\n                                    \"hash\": \"medium_Untitled_e00cea95df\",\n                                    \"ext\": \".png\",\n                                    \"mime\": \"image/png\",\n                                    \"path\": null,\n                                    \"width\": 750,\n                                    \"height\": 376,\n                                    \"size\": 26.06,\n                                    \"url\": \"/uploads/medium_Untitled_e00cea95df.png\"\n                                }\n                            },\n                            \"hash\": \"Untitled_e00cea95df\",\n                            \"ext\": \".png\",\n                            \"mime\": \"image/png\",\n                            \"size\": 7.87,\n                            \"url\": \"/uploads/Untitled_e00cea95df.png\",\n                            \"previewUrl\": null,\n                            \"provider\": \"local\",\n                            \"provider_metadata\": null,\n                            \"createdAt\": \"2023-07-17T14:42:48.289Z\",\n                            \"updatedAt\": \"2023-07-17T14:42:48.289Z\"\n                        }\n                    }\n                ]\n            }\n        }\n    },\n    \"meta\": {}\n}"
+				},
+				{
+					"name": "Post Product [With Images] (400 Undefined attribute)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"name\": \"Sepatu Nike Night\",\r\n        \"description\": \"Sepatu untuk aktifitas malam\",\r\n        \"quantity\": 1000,\r\n        \"price\": 650000,\r\n        \"inStock\": true,\r\n        \"image\": \"Sepatu Nike Night.jpg\",\r\n        \"distributor\": \"PT Nike\",\r\n        \"images\": [\r\n            {\r\n                \"name\": \"Untitled.png\",\r\n                \"alternativeText\": null,\r\n                \"caption\": null,\r\n                \"width\": 999,\r\n                \"height\": 501,\r\n                \"hash\": \"Untitled_e00cea95df\",\r\n                \"ext\": \".png\",\r\n                \"mime\": \"image/png\",\r\n                \"size\": 7.87,\r\n                \"url\": \"/uploads/Untitled_e00cea95df.png\",\r\n                \"previewUrl\": null,\r\n                \"provider\": \"local\",\r\n                \"provider_metadata\": null\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/products?populate=*",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "225"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 04:30:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": null,\n    \"error\": {\n        \"status\": 400,\n        \"name\": \"ValidationError\",\n        \"message\": \"Undefined attribute level operator name\",\n        \"details\": {\n            \"errors\": [\n                {\n                    \"path\": [],\n                    \"message\": \"Undefined attribute level operator name\",\n                    \"name\": \"ValidationError\"\n                }\n            ]\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Put Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"name\": \"Sepatu Anak Nike (New Limited Series)\",\r\n        \"distributor\": \"PT Anak Nike\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/api/products/1"
+			},
+			"response": [
+				{
+					"name": "Put Request (200 Ok)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NjAyMTUxLCJleHAiOjE2OTIxOTQxNTF9.nCHEjPB2r9qVh6dbjsW2G8J66i-12oX13MunMSwXCRQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"name\": \"Sepatu Anak Nike\",\r\n        \"distributor\": \"PT Anak Nike\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/products/2"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "322"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 14:02:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"attributes\": {\n            \"name\": \"Sepatu Anak Nike\",\n            \"description\": \"Sepatu up to date\",\n            \"quantity\": 1000,\n            \"price\": 600000,\n            \"inStock\": true,\n            \"image\": \"Sepatu Nike.jpg\",\n            \"distributor\": \"PT Anak Nike\",\n            \"createdAt\": \"2023-07-17T13:58:13.235Z\",\n            \"updatedAt\": \"2023-07-17T14:02:25.606Z\",\n            \"publishedAt\": \"2023-07-17T13:58:13.232Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt}}",
+						"type": "text"
+					}
+				],
+				"url": "{{baseUrl}}/api/products/2"
+			},
+			"response": [
+				{
+					"name": "Delete Product (200 Ok)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/api/products/4"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "312"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 14:15:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"attributes\": {\n            \"name\": \"Sepatu Nike\",\n            \"description\": \"Sepatu up to date\",\n            \"quantity\": 1000,\n            \"price\": 600000,\n            \"inStock\": true,\n            \"image\": \"Sepatu Nike.jpg\",\n            \"distributor\": \"PT Nike\",\n            \"createdAt\": \"2023-07-17T14:14:36.949Z\",\n            \"updatedAt\": \"2023-07-17T14:14:36.949Z\",\n            \"publishedAt\": \"2023-07-17T14:14:36.947Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "Upload Product Images",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/Acer/Pictures/Untitled.png"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": "{{baseUrl}}/api/upload"
+			},
+			"response": [
+				{
+					"name": "Upload Product (200 Ok)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/Acer/Pictures/Untitled.png"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/upload"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "986"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 14:42:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Untitled.png\",\n        \"alternativeText\": null,\n        \"caption\": null,\n        \"width\": 999,\n        \"height\": 501,\n        \"formats\": {\n            \"thumbnail\": {\n                \"name\": \"thumbnail_Untitled.png\",\n                \"hash\": \"thumbnail_Untitled_e00cea95df\",\n                \"ext\": \".png\",\n                \"mime\": \"image/png\",\n                \"path\": null,\n                \"width\": 245,\n                \"height\": 123,\n                \"size\": 8.92,\n                \"url\": \"/uploads/thumbnail_Untitled_e00cea95df.png\"\n            },\n            \"small\": {\n                \"name\": \"small_Untitled.png\",\n                \"hash\": \"small_Untitled_e00cea95df\",\n                \"ext\": \".png\",\n                \"mime\": \"image/png\",\n                \"path\": null,\n                \"width\": 500,\n                \"height\": 251,\n                \"size\": 17.67,\n                \"url\": \"/uploads/small_Untitled_e00cea95df.png\"\n            },\n            \"medium\": {\n                \"name\": \"medium_Untitled.png\",\n                \"hash\": \"medium_Untitled_e00cea95df\",\n                \"ext\": \".png\",\n                \"mime\": \"image/png\",\n                \"path\": null,\n                \"width\": 750,\n                \"height\": 376,\n                \"size\": 26.06,\n                \"url\": \"/uploads/medium_Untitled_e00cea95df.png\"\n            }\n        },\n        \"hash\": \"Untitled_e00cea95df\",\n        \"ext\": \".png\",\n        \"mime\": \"image/png\",\n        \"size\": 7.87,\n        \"url\": \"/uploads/Untitled_e00cea95df.png\",\n        \"previewUrl\": null,\n        \"provider\": \"local\",\n        \"provider_metadata\": null,\n        \"createdAt\": \"2023-07-17T14:42:48.289Z\",\n        \"updatedAt\": \"2023-07-17T14:42:48.289Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Post Payment Callback",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Beare {{jwt}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"va_numbers\": [\r\n        {\r\n        \"va_number\": \"75063878785\",\r\n        \"bank\": \"bca\"\r\n        }\r\n    ],\r\n    \"transaction_time\": \"2023-07-19 07:03:52\",\r\n    \"transaction_status\": \"settlement\",\r\n    \"transaction_id\": \"2d68f00a-d0aa-43bd-8de6-5073b7f086bf\",\r\n    \"status_message\": \"midtrans payment notification\",\r\n    \"status_code\": \"200\",\r\n    \"signature_key\": \"4098fe4b164e5accd625be2ab3e6fc10dcd8b274a6933c0e8e16f79b1f0a04bba08a197842a1d0f0399ec28b3709283585074c819122917100874c7d98512d0c\",\r\n    \"settlement_time\": \"2023-07-19 07:03:58\",\r\n    \"payment_type\": \"bank_transfer\",\r\n    \"payment_amounts\": [\r\n\r\n    ],\r\n    \"order_id\": \"2\",\r\n    \"merchant_id\": \"G425475063\",\r\n    \"gross_amount\": \"222000.00\",\r\n    \"fraud_status\": \"accept\",\r\n    \"expiry_time\": \"2023-07-20 07:03:52\",\r\n    \"currency\": \"IDR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/api/payment-callbacks"
+			},
+			"response": [
+				{
+					"name": "Post Payment Callback (200 after update request in strapi)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Beare {{jwt}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"va_numbers\": [\r\n    {\r\n      \"va_number\": \"75063878785\",\r\n      \"bank\": \"bca\"\r\n    }\r\n  ],\r\n  \"transaction_time\": \"2023-07-19 07:03:52\",\r\n  \"transaction_status\": \"settlement\",\r\n  \"transaction_id\": \"2d68f00a-d0aa-43bd-8de6-5073b7f086bf\",\r\n  \"status_message\": \"midtrans payment notification\",\r\n  \"status_code\": \"200\",\r\n  \"signature_key\": \"4098fe4b164e5accd625be2ab3e6fc10dcd8b274a6933c0e8e16f79b1f0a04bba08a197842a1d0f0399ec28b3709283585074c819122917100874c7d98512d0c\",\r\n  \"settlement_time\": \"2023-07-19 07:03:58\",\r\n  \"payment_type\": \"bank_transfer\",\r\n  \"payment_amounts\": [\r\n\r\n  ],\r\n  \"order_id\": \"18\",\r\n  \"merchant_id\": \"G425475063\",\r\n  \"gross_amount\": \"222000.00\",\r\n  \"fraud_status\": \"accept\",\r\n  \"expiry_time\": \"2023-07-20 07:03:52\",\r\n  \"currency\": \"IDR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/payment-callbacks"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "332"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 00:05:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 18,\n        \"items\": [\n            {\n                \"id\": 1,\n                \"productName\": \"Baju Kamukita\",\n                \"price\": 100000,\n                \"qty\": 2\n            }\n        ],\n        \"totalPrice\": 222000,\n        \"deliveryAddress\": \"Jalan Baru\",\n        \"courierName\": \"JNE\",\n        \"shippingCost\": 22000,\n        \"createdAt\": \"2023-07-19T00:02:11.148Z\",\n        \"updatedAt\": \"2023-07-19T00:02:11.148Z\",\n        \"publishedAt\": \"2023-07-19T00:02:11.140Z\",\n        \"orderStatus\": \"waitingPayment\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Post Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\" : {\r\n        \"items\": [\r\n            {\r\n                \"id\":1,\r\n                \"productName\":\"Baju Kamukita XRay\",\r\n                \"price\": 100000,\r\n                \"qty\": 3\r\n            },\r\n            {\r\n                \"id\":2,\r\n                \"productName\":\"Baju Kurama\",\r\n                \"price\": 500000,\r\n                \"qty\": 2\r\n            }\r\n        ],\r\n        \"totalPrice\":1322000,\r\n        \"deliveryAddress\": \"Jalan Baru\",\r\n        \"courierName\": \"JNE\",\r\n        \"shippingCost\": 22000,\r\n        \"orderStatus\": \"waitingPayment\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/api/orders"
+			},
+			"response": [
+				{
+					"name": "Post Order (200 Ok)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\" : {\r\n        \"items\": [\r\n            {},\r\n            {}\r\n        ],\r\n        \"totalPrice\":300000,\r\n        \"deliveryAddress\": \"Jalan Baru\",\r\n        \"courierName\": \"JNE\",\r\n        \"shippingCost\": 22000\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/orders"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "269"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 08:26:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"attributes\": {\n            \"items\": [\n                {},\n                {}\n            ],\n            \"totalPrice\": 300000,\n            \"deliveryAddress\": \"Jalan Baru\",\n            \"courierName\": \"JNE\",\n            \"shippingCost\": 22000,\n            \"createdAt\": \"2023-07-18T08:26:57.846Z\",\n            \"updatedAt\": \"2023-07-18T08:26:57.846Z\",\n            \"publishedAt\": \"2023-07-18T08:26:57.806Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				},
+				{
+					"name": "Post Order (403 Forbidden)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\" : {\r\n        \"items\": [\r\n            {},\r\n            {}\r\n        ],\r\n        \"totalPrice\":300000,\r\n        \"deliveryAddress\": \"Jalan Baru\",\r\n        \"courierName\": \"JNE\",\r\n        \"shippingCost\": 22000\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/orders"
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "95"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 08:27:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": null,\n    \"error\": {\n        \"status\": 403,\n        \"name\": \"ForbiddenError\",\n        \"message\": \"Forbidden\",\n        \"details\": {}\n    }\n}"
+				},
+				{
+					"name": "Post Order (200 connect mitrans gateway)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\" : {\r\n        \"items\": [\r\n            {\r\n                \"id\":1,\r\n                \"productName\":\"Sepatu Adidas\",\r\n                \"price\": 60000,\r\n                \"qty\": 1\r\n            },\r\n            {\r\n                \"id\":1,\r\n                \"productName\":\"Kaos Puma\",\r\n                \"price\": 150000,\r\n                \"qty\": 3\r\n            }\r\n        ],\r\n        \"totalPrice\":1072000,\r\n        \"deliveryAddress\": \"Jalan Baru\",\r\n        \"courierName\": \"JNE\",\r\n        \"shippingCost\": 22000,\r\n        \"orderStatus\": \"waitingPayment\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/orders"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "155"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 14:55:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"532f501b-fa06-4ee7-93db-788f31e992bd\",\n    \"redirect_url\": \"https://app.sandbox.midtrans.com/snap/v3/redirection/532f501b-fa06-4ee7-93db-788f31e992bd\"\n}"
+				},
+				{
+					"name": "Post Order (200 connect mitrans core(gopay) gateway)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\" : {\r\n        \"items\": [\r\n            {\r\n                \"id\":1,\r\n                \"productName\":\"Sepatu Adidas Kamukita\",\r\n                \"price\": 90000,\r\n                \"qty\": 10\r\n            }\r\n        ],\r\n        \"totalPrice\":922000,\r\n        \"deliveryAddress\": \"Jalan Baru\",\r\n        \"courierName\": \"JNE\",\r\n        \"shippingCost\": 22000,\r\n        \"orderStatus\": \"waitingPayment\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/orders"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "925"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 15:29:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": \"201\",\n    \"status_message\": \"GoPay transaction is created\",\n    \"transaction_id\": \"7d2d5f88-31b6-43ea-85be-e5362c166ccd\",\n    \"order_id\": \"12\",\n    \"merchant_id\": \"G425475063\",\n    \"gross_amount\": \"922000.00\",\n    \"currency\": \"IDR\",\n    \"payment_type\": \"gopay\",\n    \"transaction_time\": \"2023-07-18 22:29:45\",\n    \"transaction_status\": \"pending\",\n    \"fraud_status\": \"accept\",\n    \"actions\": [\n        {\n            \"name\": \"generate-qr-code\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/gopay/7d2d5f88-31b6-43ea-85be-e5362c166ccd/qr-code\"\n        },\n        {\n            \"name\": \"deeplink-redirect\",\n            \"method\": \"GET\",\n            \"url\": \"https://simulator.sandbox.midtrans.com/gopay/partner/app/payment-pin?id=d344122f-3e59-4ea5-ad22-15381d803028\"\n        },\n        {\n            \"name\": \"get-status\",\n            \"method\": \"GET\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/7d2d5f88-31b6-43ea-85be-e5362c166ccd/status\"\n        },\n        {\n            \"name\": \"cancel\",\n            \"method\": \"POST\",\n            \"url\": \"https://api.sandbox.midtrans.com/v2/7d2d5f88-31b6-43ea-85be-e5362c166ccd/cancel\"\n        }\n    ],\n    \"expiry_time\": \"2023-07-18 22:44:45\"\n}"
+				}
+			]
+		}
+	]
+}
